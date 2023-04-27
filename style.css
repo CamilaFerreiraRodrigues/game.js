@@ -1,0 +1,67 @@
+*{
+    /*alterando a margem e o padding do bbody que vem por padrao*/
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*EDITANDO NO CSS
+ID -  tem que colocar #
+CLASS- tem que colocar um (ponto)
+tag - apenas o nome da tag
+
+*/
+
+
+#game{ /* mexendo no id game */
+    width: 500px;
+    height: 200px;
+    border: 1px solid black; /*bordA*/
+
+}
+
+#personagem {
+    width: 20px;
+    height: 50px;
+    background-color: pink;
+    position: relative;
+    top: 150px; /*150 pixel longe do top que tem 200 e o boneco tem 50*/
+    
+
+}
+/*ALEM DAS ANIMAÇÕES TEMOS QUE CRIAR UMA CLASSE PARA PODER CONTROLAR O JOGO  */
+
+.animar{
+    animation: personagem 500ms infinite ; /* tava dentro do #personagem, mas para poder ter interação esta aqui -- interação feita por java.script*/
+
+}
+
+@keyframes personagem{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+
+
+}
+
+#quadrado{
+    width: 20px; /*largura*/
+    height: 20px;
+    background-color: rgb(5, 58, 58);
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: quadrado 1s infinite linear;/*ifinite = para não para de animar; e linear= uma animação constante */
+
+}
+
+/**CRIANDO A ANIMAÇÃO PARA O QUADRADO*/
+
+@keyframes quadrado {
+
+    0% {left: 480px;} /**inicio da animação*/
+    100%{ left: -40px;} /*para o quadrado sair so retangulo*/
+    /*final da animação, PRECISA chamar no id quadrado */
+    
+}
